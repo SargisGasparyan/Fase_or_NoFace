@@ -1,12 +1,10 @@
 import os
 from flask import Flask, render_template, request, jsonify
 from compare_faces import compare
-import requests
 from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 app.config["IMAGE_UPLOADS"] = ""
 CORS(app)
-url = 'https://crm-emotion-rec.herokuapp.com/emotion_recognizer'
 image2 = 'img.jpg'
 
 @app.route('/')
